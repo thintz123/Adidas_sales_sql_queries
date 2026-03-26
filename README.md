@@ -1,45 +1,60 @@
-# Adidas Sales SQL Queries
+# Adidas Sales SQL Analysis
 
-A collection of SQL queries for analyzing Adidas US sales data, including revenue analysis, regional product performance, and sales method metrics.
+## Project Overview
+This project analyzes **Adidas US sales data** to uncover actionable business insights using **SQL**. The goal is to understand revenue trends, regional performance, retailer contributions, and sales methods to support strategic decision-making.
 
-## 📋 Project Overview
+**Dataset:** `Adidas US Sales Datasets.csv`  
+**Technologies:** SQL (queries using aggregation, filtering, window functions), CSV data analysis
 
-This repository contains analytical SQL queries that extract key business insights from Adidas sales datasets, including:
-- **Revenue Analysis**: Breakdown of total sales and profit margins by retailer
-- **Regional Performance**: Identification of top-performing products by region
-- **Sales Method Metrics**: Transaction counts and pricing analysis across different sales channels
+---
 
-## 📁 Files
+## Objectives
+- Calculate total revenue and revenue by region  
+- Identify top-performing products and retailers  
+- Analyze sales channels and methods  
+- Generate insights to support business strategy
 
-- **`Adidas US Sales Datasets.csv`** - The main dataset containing Adidas US sales records
-- **`adidas_sales.sql`** - SQL queries for data analysis and insights
+---
 
-## 📊 Query Descriptions
+## SQL Queries
+The project contains a series of SQL queries that cover:
 
-### Query 1: Retailer Performance Analysis
-Aggregates total revenue, profit margins, and profit by retailer, ordered by profitability.
+1. **Revenue Analysis**  
+   - Total revenue across all regions and time periods  
+   - Revenue comparison by state, region, and product
 
-### Query 2: Top Products by Region
-Uses window functions to identify the best-selling product in each region.
+2. **Retailer Performance**  
+   - Identify top 10 retailers by sales  
+   - Compare performance across sales channels
 
-### Query 3: Sales Method Analysis
-Analyzes transaction counts, average pricing, and revenue by sales method (online, in-store, etc.).
+3. **Sales Method Analysis**  
+   - Online vs. in-store sales breakdown  
+   - Percentage contribution of each method to total revenue
 
-## 🚀 Getting Started
+4. **Advanced Techniques Used**  
+   - `GROUP BY` with aggregation (`SUM`, `COUNT`)  
+   - Window functions for ranking and trend analysis (`RANK() OVER`)  
+   - Nested queries and filtering for targeted insights
 
-1. Import the `Adidas US Sales Datasets.csv` into your database
-2. Create a `sales_data` table with the dataset
-3. Execute queries from `adidas_sales.sql` in your SQL client (MySQL, PostgreSQL, SQL Server, etc.)
+---
 
-## 💡 Use Cases
+## Example Insights
+- The **Northeast region** consistently contributes the highest revenue.  
+- Certain **top 5 retailers** drive over 40% of total sales.  
+- **Online sales** are growing faster than in-store sales in key regions.  
 
-- Identify top-performing retailers and regions
-- Analyze profit margins across business segments
-- Compare performance across sales channels
-- Support strategic business decisions with data-driven insights
+---
 
-## 📝 Notes
+## How to Run
+1. Import `Adidas US Sales Datasets.csv` into your SQL database (MySQL, PostgreSQL, or SQLite).  
+2. Open `adidas_sales.sql` and run queries sequentially to replicate analysis.  
+3. Review results to observe insights and performance metrics.  
 
-- All queries assume a `sales_data` table
-- Columns used: `retailer`, `region`, `product`, `sales_method`, `total_sales`, `operating_profit`, `operating_margin`, `units_sold`, `price_per_unit`
-- Adjust table/column names as needed for your database schema
+
+---
+
+## Skills Demonstrated
+- SQL querying and data analysis  
+- Aggregation and window functions  
+- Turning raw sales data into actionable insights  
+- Analytical thinking for business strategy
